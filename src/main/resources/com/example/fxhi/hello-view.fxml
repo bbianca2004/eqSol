@@ -4,19 +4,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="217.0" prefWidth="416.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fxhi.HelloController">
+<VBox alignment="CENTER" prefHeight="217.0" prefWidth="416.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fxhi.QESolverController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <HBox prefHeight="100.0" prefWidth="200.0">
-      <children>
+    <HBox prefHeight="100.0" prefWidth="500.0" spacing="50.0">
+        <TextField fx:id="txtA" prefHeight="25.0" prefWidth="75.0" promptText="a:"/>
+        <TextField fx:id="txtB" prefHeight="25.0" prefWidth="75.0" promptText="b:"/>
+        <TextField fx:id="txtC" prefHeight="25.0" prefWidth="75.0" promptText="c:"/>
+        <Button onAction="#onSolveBtnClick" text="Solve"/>
+    </HBox>
 
-          <TextField fx:id="aCoefTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="76.0" promptText="a:" />
-          <TextField fx:id="bCoefTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="76.0" promptText="b:" />
-          <TextField fx:id="cCoefTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="76.0" promptText="c:" />
-      </children>
-   </HBox>
-
-    <Label fx:id="welcomeText" />
-    <Button fx:id="btn" onAction="#onHelloBtnClick" style="-fx-background-color: green;" text="Go!" />
+    <Label fx:id="display" />
 </VBox>
