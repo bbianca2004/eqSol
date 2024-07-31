@@ -28,8 +28,15 @@ public class QuadraticEquationSolution {
             this.solutionType = SolutionType.TWO_DISTINCT_ROOTS;
         }
 
-        this.root1 = root1;
-        this.root2 = root2;
+        if(root1 > root2)
+        {
+            this.root1 = root2;
+            this.root2 = root1;
+        }
+        else {
+            this.root1 = root1;
+            this.root2 = root2;
+        }
     }
 
     public QuadraticEquationSolution(double root)
